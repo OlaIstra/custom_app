@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins";
+
+.app__formula {
+  position: absolute;
+  top: $height + $height;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: $height;
+  padding: $padding;
+  background-color: white;
+  border-bottom: 1px solid $baseColor;
+
+  .info {
+    min-width: $info-cell-width;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    border-right: 1px solid $baseColor;
+    padding-right: $padding;
+  }
+
+  .input {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid $baseColor;
+    margin-left: $padding;
+    outline: none;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+.app__toolbar {
+  position: absolute;
+  top: $height;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: $height;
+  padding: $padding;
+  background-color: white;
+  border-bottom: 1px solid $baseColor;
+
+  & .btn {
+    @include button(black, $hoverColor);
+  }
+}
