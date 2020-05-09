@@ -1,0 +1,14 @@
+@mixin button($color: green, $hover: grey) {
+  color: $color;
+
+  & span {
+    &:hover {
+      color: $hover;
+      cursor: pointer;
+    }
+  }
+
+  &:active,
+  &.active {
+  }
+}

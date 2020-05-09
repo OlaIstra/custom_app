@@ -4,9 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Javascript App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="app">
+        <div class="app__header">
+          <input type="text" class="input" value="new table" />
+          <div>
+            <div class="btn">
+              <span class="material-icons">
+                exit_to_app
+              </span>
+            </div>
+            <div class="btn">
+              <span class="material-icons">
+                delete
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app__toolbar">
+          <div class="btn">
+            <span class="material-icons">
+              format_align_left
+            </span>
+          </div>
+
+          <div class="btn">
+            <span class="material-icons">
+              format_align_center
+            </span>
+          </div>
+
+          <div class="btn">
+            <span class="material-icons">
+              format_align_right
+            </span>
+          </div>
+
+          <div class="btn">
+            <span class="material-icons">
+              format_bold
+            </span>
+          </div>
+
+          <div class="btn">
+            <span class="material-icons">
+              format_italic
+            </span>
+          </div>
+
+          <div class="btn">
+            <span class="material-icons">
+              format_underlined
+            </span>
+          </div>
+        </div>
+
+        <div class="app__formula">
+          <div class="info">fx</div>
+          <div class="input" contenteditable spellcheck="false"></div>
+        </div>
+
+        <div class="app__table">
+          <div class="row">
+            <div class="row-info"></div>
+            <div class="row-data">
+              <div class="column">
+                A
+              </div>
+              <div class="column">
+                B
+              </div>
+              <div class="column">
+                C
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row-info">1</div>
+            <div class="row-data">
+              <div class="cell selected" contenteditable spellcheck="false">
+                qw
+              </div>
+              <div class="cell" contenteditable spellcheck="false">qwe</div>
+              <div class="cell" contenteditable spellcheck="false">qwe</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
