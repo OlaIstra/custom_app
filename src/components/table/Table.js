@@ -1,10 +1,11 @@
 import { AppComponent } from "@core/AppComponent";
+import { createTable } from "./table.template";
 
 export class Table extends AppComponent {
   //static className = "app__table";
 
-  constructor() {
-    super();
+  constructor($root) {
+    super($root);
     this.className = "app__table";
   }
 
@@ -13,6 +14,6 @@ export class Table extends AppComponent {
   }
 
   toHTML() {
-    return "<h1>Table</h1>";
+    return createTable();
   }
 }

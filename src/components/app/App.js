@@ -8,21 +8,24 @@ export class App {
   getRoot() {
     const $root = $.create("div", "app");
 
-    this.components.forEach((Component) => {
+    this.components = this.components.map((Component) => {
       const $el = $.create("div");
 
       const component = new Component($el);
-
+      if (component.name) {
+        window["c" + component.name] = component;
+      }
       $el.html(component.toHTML());
-      console.log($el);
       $el.$el.classList.add(component.getClassName());
 
       $root.append($el);
+      return component;
     });
     return $root;
   }
 
   render() {
     this.$el.append(this.getRoot());
+    this.components.forEach((component) => component.init());
   }
 }

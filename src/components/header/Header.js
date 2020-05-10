@@ -4,7 +4,7 @@ export class Header extends AppComponent {
   //static className = "app__header";
 
   constructor($root) {
-    super();
+    super($root);
     this.className = "app__header";
   }
 
@@ -13,6 +13,20 @@ export class Header extends AppComponent {
   }
 
   toHTML() {
-    return "<h1>Header</h1>";
+    return `
+    <input type="text" class="input" value="new table" />
+    <div>
+      <div class="btn">
+        <span class="material-icons">
+          exit_to_app
+        </span>
+      </div>
+      <div class="btn">
+        <span class="material-icons">
+          delete
+        </span>
+      </div>
+    </div>
+    `;
   }
 }
