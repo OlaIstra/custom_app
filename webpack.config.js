@@ -12,7 +12,13 @@ const filename = (extension) =>
 
 const jsLoaders = () => {
   const loaders = [
-    { loader: "babel-loader", options: { presets: ["@babel/preset-env"] } },
+    {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+        plugins: ["@babel/plugin-proposal-class-properties"],
+      },
+    },
   ];
 
   if (isDev) {
