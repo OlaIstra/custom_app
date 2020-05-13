@@ -1,26 +1,27 @@
 import { AppComponent } from "@core/AppComponent";
 
 export class Toolbar extends AppComponent {
-  //static className = "app__toolbar";
+	//static className = "app__toolbar";
 
-  constructor($root) {
-    super($root, {
-      name: "Toolbar",
-      listeners: ["click"],
-    });
-    this.className = "app__toolbar";
-  }
+	constructor($root, options) {
+		super($root, {
+			name: "Toolbar",
+			listeners: ["click"],
+			...options,
+		});
+		this.className = "app__toolbar";
+	}
 
-  getClassName() {
-    return this.className;
-  }
+	getClassName() {
+		return this.className;
+	}
 
-  onClick(event) {
-    console.log(event.target);
-  }
+	onClick(event) {
+		console.log(event.target);
+	}
 
-  toHTML() {
-    return `
+	toHTML() {
+		return `
     <div class="btn">
             <span class="material-icons">
               format_align_left
@@ -57,5 +58,5 @@ export class Toolbar extends AppComponent {
             </span>
           </div>
     `;
-  }
+	}
 }
